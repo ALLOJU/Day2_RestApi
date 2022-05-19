@@ -14,10 +14,10 @@ public class HelloRestController {
   public String sayeHelloWithParam(@RequestParam(value="name") String name){
    return "Hello "+name+"";
    }
-// @GetMapping("/param/{name}")
-// public String sayeHelloWithPathVariable(@PathVariable String name){
-//  return "Hello "+name+"";
-// }
+ @GetMapping("/param/{name}")
+ public String sayeHelloWithPathVariable(@PathVariable String name){
+  return "Hello "+name+"";
+ }
 
 
 }
