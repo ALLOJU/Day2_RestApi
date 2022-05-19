@@ -21,12 +21,15 @@ public class HelloRestController {
  }
  @PostMapping("/post")
  public String sayeHelloWithPost(@RequestBody User user){
-  return "Hello "+user.getFirstName()+" "+user.getLastName();
+  return "Hello "+user.getFirstName()+" "+user.getLastName() +"";
  }
  @PutMapping("/put/{firstName}")
  public String sayeHelloWithPut(@PathVariable String firstName,@RequestParam(value="lastName") String lastName){
   return "Hello "+firstName+" "+lastName;
  }
 
-
+ @GetMapping("/message")
+ public String message() {
+  return "Hello From BridgeLabz";
+ }
 }
